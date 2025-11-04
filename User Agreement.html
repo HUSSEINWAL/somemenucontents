@@ -1,60 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User Agreement - [Your App Name]</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Agreement - PHOPCHAT</title>
   <style>
     body {
-      font-family: Georgia, 'Times New Roman', Times, serif;
-      line-height: 1.8;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
       margin: 0;
       padding: 20px;
-
+      transition: background-color 0.3s, color 0.3s;
     }
+
     .container {
-      max-width: 900px;
+      max-width: 800px;
       margin: auto;
-      padding: 20px;
+      padding: 30px;
+      border-radius: 12px;
+      transition: background-color 0.3s, color 0.3s;
     }
 
     h1 {
       text-align: center;
-      font-size: 1.8em;
       margin-bottom: 20px;
     }
-    h2 {
-      margin-top: 25px;
-      font-size: 1.5em;
+
+    hr {
+      border: none;
+      margin: 25px 0;
+      border-top: 1px solid;
+      transition: border-color 0.3s;
     }
-    p, ul {
-      margin-bottom: 15px;
-    }
+
     ul {
       padding-left: 20px;
     }
-    li {
-      margin-bottom: 8px;
+
+    .highlight {
+      padding: 10px;
+      border-left: 4px solid;
+      margin-bottom: 20px;
+      transition: background-color 0.3s, border-color 0.3s;
     }
-    hr {
-      border: none;
-      margin: 30px 0;
-    }
+
     footer {
       text-align: center;
+      margin-top: 40px;
       font-size: 0.9em;
-      margin-top: 50px;
-    }
-       .highlight {
-    background-color: #f1fff9;
-      padding: 5px;
-      border-left: 4px solid #0bb427;
-      margin-bottom: 10px;
+      transition: color 0.3s;
     }
   </style>
 </head>
 <body>
-  <div class="container">
+    <div class="container">
     <h1>USER AGREEMENT</h1>
     <div class="highlight">
     <p><strong>Effective Date:</strong> 1st DEC, 2025</p>
@@ -154,5 +153,40 @@ Users are strictly prohibited from posting, sharing, or engaging in any sexually
 
     <footer>©2025 PhopChat. All rights reserved.</footer>
   </div>
+  
+  <script>
+    function applyTheme() {
+      const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const body = document.body;
+      const container = document.querySelector('.container');
+      const highlight = document.querySelector('.highlight');
+      const hr = document.querySelectorAll('hr');
+      const footer = document.querySelector('footer');
+
+      if (isDark) {
+        body.style.backgroundColor = '#121212';
+        body.style.color = '#ffffff';
+        container.style.backgroundColor = '#1e1e1e';
+        highlight.style.backgroundColor = '#1b2b1b';
+        highlight.style.borderLeftColor = '#0bb427';
+        hr.forEach(el => el.style.borderTopColor = '#444');
+        footer.style.color = '#ccc';
+      } else {
+        body.style.backgroundColor = '#ffffff';
+        body.style.color = '#000000';
+        container.style.backgroundColor = '#f9f9f9';
+        highlight.style.backgroundColor = '#f1fff9';
+        highlight.style.borderLeftColor = '#0bb427';
+        hr.forEach(el => el.style.borderTopColor = '#ccc');
+        footer.style.color = '#312f2f';
+      }
+    }
+
+    // Apply theme on page load
+    applyTheme();
+
+    // Listen for system theme changes
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyTheme);
+  </script>
 </body>
 </html>
