@@ -1,51 +1,54 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy - [Your App Name]</title>
+  <title>Privacy Policy - PHOPCHAT</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.6;
-    
-     
       margin: 0;
       padding: 20px;
+      transition: background-color 0.3s, color 0.3s;
     }
+
     .container {
       max-width: 800px;
       margin: auto;
-
       padding: 30px;
       border-radius: 12px;
-
+      transition: background-color 0.3s, color 0.3s;
     }
- 
+
     h1 {
       text-align: center;
       margin-bottom: 20px;
     }
+
     hr {
       border: none;
-
       margin: 25px 0;
+      border-top: 1px solid;
+      transition: border-color 0.3s;
     }
+
     ul {
       padding-left: 20px;
     }
+
     .highlight {
-      background-color: #f1fff9;
       padding: 10px;
-      border-left: 4px solid #0bb427;
+      border-left: 4px solid;
       margin-bottom: 20px;
+      transition: background-color 0.3s, border-color 0.3s;
     }
+
     footer {
       text-align: center;
       margin-top: 40px;
       font-size: 0.9em;
-      color: #312f2f;
+      transition: color 0.3s;
     }
   </style>
 </head>
@@ -113,6 +116,42 @@
       <p>©2025 PhopChat. All rights reserved.</p>
     </footer>
   </div>
+
+  <script>
+    function applyTheme() {
+      const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const body = document.body;
+      const container = document.querySelector('.container');
+      const highlight = document.querySelector('.highlight');
+      const hr = document.querySelectorAll('hr');
+      const footer = document.querySelector('footer');
+
+      if (isDark) {
+        body.style.backgroundColor = '#121212';
+        body.style.color = '#ffffff';
+        container.style.backgroundColor = '#1e1e1e';
+        highlight.style.backgroundColor = '#1b2b1b';
+        highlight.style.borderLeftColor = '#0bb427';
+        hr.forEach(el => el.style.borderTopColor = '#444');
+        footer.style.color = '#ccc';
+      } else {
+        body.style.backgroundColor = '#ffffff';
+        body.style.color = '#000000';
+        container.style.backgroundColor = '#f9f9f9';
+        highlight.style.backgroundColor = '#f1fff9';
+        highlight.style.borderLeftColor = '#0bb427';
+        hr.forEach(el => el.style.borderTopColor = '#ccc');
+        footer.style.color = '#312f2f';
+      }
+    }
+
+    // Apply theme on page load
+    applyTheme();
+
+    // Listen for system theme changes
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyTheme);
+  </script>
 </body>
 </html>
-  
+
+
