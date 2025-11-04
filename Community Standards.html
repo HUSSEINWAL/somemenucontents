@@ -1,62 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Community Standards for Social Media Applications</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community Standards - PHOPCHAT</title>
   <style>
     body {
-      font-family: Georgia, 'Times New Roman', Times, serif;
-      line-height: 1.8;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
       margin: 0;
       padding: 20px;
+      transition: background-color 0.3s, color 0.3s;
     }
+
     .container {
-      max-width: 1000px;
+      max-width: 800px;
       margin: auto;
-     
-      padding: 40px;
-      border-radius: 10px;
-   
+      padding: 30px;
+      border-radius: 12px;
+      transition: background-color 0.3s, color 0.3s;
     }
 
     h1 {
       text-align: center;
-      margin-bottom: 30px;
-      font-size: 2.2em;
-    }
-    h2 {
-      margin-top: 35px;
-      font-size: 1.6em;
-    }
-    h3 {
-      margin-top: 25px;
-      font-size: 1.3em;
-    }
-    p {
-      text-align: justify;
       margin-bottom: 20px;
     }
+
     hr {
       border: none;
-    
-      margin: 35px 0;
+      margin: 25px 0;
+      border-top: 1px solid;
+      transition: border-color 0.3s;
     }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .highlight {
+      padding: 10px;
+      border-left: 4px solid;
+      margin-bottom: 20px;
+      transition: background-color 0.3s, border-color 0.3s;
+    }
+
     footer {
       text-align: center;
+      margin-top: 40px;
       font-size: 0.9em;
-      margin-top: 50px;
-    }
-      .highlight {
-     background-color: #f1fff9;
-      padding: 10px;
-      border-left: 4px solid #0bb427;
-      margin-bottom: 20px;
+      transition: color 0.3s;
     }
   </style>
 </head>
 <body>
-  <div class="container">
+      <div class="container">
     <h1>Community Standards</h1>
 <div class="highlight">
     <p><strong>Effective Date:</strong>1st DEC 2025</p>
@@ -132,5 +129,40 @@
       <p>© 2025 PhopChat. All rights reserved.</p>
     </footer>
   </div>
+
+  <script>
+    function applyTheme() {
+      const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const body = document.body;
+      const container = document.querySelector('.container');
+      const highlight = document.querySelector('.highlight');
+      const hr = document.querySelectorAll('hr');
+      const footer = document.querySelector('footer');
+
+      if (isDark) {
+        body.style.backgroundColor = '#121212';
+        body.style.color = '#ffffff';
+        container.style.backgroundColor = '#1e1e1e';
+        highlight.style.backgroundColor = '#1b2b1b';
+        highlight.style.borderLeftColor = '#0bb427';
+        hr.forEach(el => el.style.borderTopColor = '#444');
+        footer.style.color = '#ccc';
+      } else {
+        body.style.backgroundColor = '#ffffff';
+        body.style.color = '#000000';
+        container.style.backgroundColor = '#f9f9f9';
+        highlight.style.backgroundColor = '#f1fff9';
+        highlight.style.borderLeftColor = '#0bb427';
+        hr.forEach(el => el.style.borderTopColor = '#ccc');
+        footer.style.color = '#312f2f';
+      }
+    }
+
+    // Apply theme on page load
+    applyTheme();
+
+    // Listen for system theme changes
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyTheme);
+  </script>
 </body>
 </html>
