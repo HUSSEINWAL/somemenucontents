@@ -2,23 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Terms of service</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Terms of Service - PHOPCHAT</title>
   <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #000000;
+      --container-bg: #f9f9f9;
+      --highlight-bg: #f1fff9;
+      --highlight-border: #0bb427;
+      --hr-color: #ccc;
+      --footer-color: #312f2f;
+    }
+
+    [data-theme="dark"] {
+      --bg-color: #121212;
+      --text-color: #ffffff;
+      --container-bg: #1e1e1e;
+      --highlight-bg: #1b2b1b;
+      --highlight-border: #0bb427;
+      --hr-color: #444;
+      --footer-color: #ccc;
+    }
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.6;
       margin: 0;
       padding: 20px;
+      background-color: var(--bg-color);
+      color: var(--text-color);
       transition: background-color 0.3s, color 0.3s;
+      -webkit-text-size-adjust: 100%;
     }
 
     .container {
       max-width: 800px;
       margin: auto;
-      padding: 30px;
+      padding: 20px;
+      background-color: var(--container-bg);
       border-radius: 12px;
-      transition: background-color 0.3s, color 0.3s;
+      box-sizing: border-box;
     }
 
     h1 {
@@ -29,7 +53,7 @@
     hr {
       border: none;
       margin: 25px 0;
-      border-top: 1px solid;
+      border-top: 1px solid var(--hr-color);
       transition: border-color 0.3s;
     }
 
@@ -39,29 +63,50 @@
 
     .highlight {
       padding: 10px;
-      border-left: 4px solid;
+      border-left: 4px solid var(--highlight-border);
       margin-bottom: 20px;
-      transition: background-color 0.3s, border-color 0.3s;
+      background-color: var(--highlight-bg);
+      border-radius: 0 8px 8px 0;
     }
 
     footer {
       text-align: center;
       margin-top: 40px;
       font-size: 0.9em;
-      transition: color 0.3s;
+      color: var(--footer-color);
+    }
+
+    /* Better mobile experience */
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+      
+      .container {
+        padding: 15px;
+        border-radius: 8px;
+      }
+      
+      h1 {
+        font-size: 1.5em;
+      }
+      
+      h2 {
+        font-size: 1.2em;
+      }
     }
   </style>
 </head>
-<body><div class="container">
-    <h1>Terms of Service</h1>
+<body>
+  <div class="container">
+    <h1>📜 USER AGREEMENT</h1>
+    <div class="highlight">
+      <p><strong>Effective Date:</strong> 1st DEC 2025</p>
+      <p><strong>App Name:</strong> PHOPCHAT</p>
+    </div>
 
-   <div class="highlight">
-
-     <p><strong>Effective Date:</strong> 1st DEC, 2025</p>
-    <p><strong>Platform Name:</strong> PHOPCHAT</p>
-    <!-- <p><strong>Prepared by:</strong> [Your Name / Institution / Company]</p> -->
-    <!-- <p><strong>Document Version:</strong> 1.0</p> -->
-   </div>
+    <!-- Rest of your HTML content remains the same -->
+    <!-- ... -->
 
     <hr>
 
@@ -144,43 +189,62 @@
       Terms of Service for social media platforms are more than legal formalities; they are critical instruments of digital governance. They codify expectations, protect users, safeguard intellectual property, and align platform operations with ethical, developmental, and regulatory imperatives. A PhD-level analysis emphasizes that robust, transparent, and enforceable ToS are foundational to safe, equitable, and sustainable social media ecosystems.
     </p>
 
+
     <footer>
       <p>©2025 PhopChat. All rights reserved.</p>
     </footer>
-  
-  <script>
-    function applyTheme() {
-      const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      const body = document.body;
-      const container = document.querySelector('.container');
-      const highlight = document.querySelector('.highlight');
-      const hr = document.querySelectorAll('hr');
-      const footer = document.querySelector('footer');
+  </div>
 
-      if (isDark) {
-        body.style.backgroundColor = '#121212';
-        body.style.color = '#ffffff';
-        container.style.backgroundColor = '#1e1e1e';
-        highlight.style.backgroundColor = '#1b2b1b';
-        highlight.style.borderLeftColor = '#0bb427';
-        hr.forEach(el => el.style.borderTopColor = '#444');
-        footer.style.color = '#ccc';
-      } else {
-        body.style.backgroundColor = '#ffffff';
-        body.style.color = '#000000';
-        container.style.backgroundColor = '#f9f9f9';
-        highlight.style.backgroundColor = '#f1fff9';
-        highlight.style.borderLeftColor = '#0bb427';
-        hr.forEach(el => el.style.borderTopColor = '#ccc');
-        footer.style.color = '#312f2f';
+  <script>
+    // Enhanced theme detection
+    function applyTheme() {
+      try {
+        // Try to get theme from parent (React Native)
+        if (window.ReactNativeWebView) {
+          window.ReactNativeWebView.postMessage(JSON.stringify({ type: 'getTheme' }));
+          return;
+        }
+        
+        // Fallback to system preference
+        const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        setTheme(isDark);
+      } catch (e) {
+        console.error('Error applying theme:', e);
       }
     }
 
-    // Apply theme on page load
-    applyTheme();
+    function setTheme(isDark) {
+      const root = document.documentElement;
+      if (isDark) {
+        root.setAttribute('data-theme', 'dark');
+      } else {
+        root.removeAttribute('data-theme');
+      }
+    }
 
-    // Listen for system theme changes
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyTheme);
+    // Listen for theme changes from React Native
+    window.addEventListener('message', (event) => {
+      try {
+        const data = JSON.parse(event.data);
+        if (data.theme) {
+          setTheme(data.theme === 'dark');
+        }
+      } catch (e) {
+        console.error('Error processing message:', e);
+      }
+    });
+
+    // Apply theme on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      applyTheme();
+      
+      // Listen for system theme changes (if not in WebView)
+      if (!window.ReactNativeWebView) {
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+          setTheme(e.matches);
+        });
+      }
+    });
   </script>
 </body>
 </html>
