@@ -2,23 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Community Standards - PHOPCHAT</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Community Standards- PHOPCHAT</title>
   <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #000000;
+      --container-bg: #f9f9f9;
+      --highlight-bg: #f1fff9;
+      --highlight-border: #0bb427;
+      --hr-color: #ccc;
+      --footer-color: #312f2f;
+    }
+
+    [data-theme="dark"] {
+      --bg-color: #121212;
+      --text-color: #ffffff;
+      --container-bg: #1e1e1e;
+      --highlight-bg: #1b2b1b;
+      --highlight-border: #0bb427;
+      --hr-color: #444;
+      --footer-color: #ccc;
+    }
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.6;
       margin: 0;
       padding: 20px;
+      background-color: var(--bg-color);
+      color: var(--text-color);
       transition: background-color 0.3s, color 0.3s;
+      -webkit-text-size-adjust: 100%;
     }
 
     .container {
       max-width: 800px;
       margin: auto;
-      padding: 30px;
+      padding: 20px;
+      background-color: var(--container-bg);
       border-radius: 12px;
-      transition: background-color 0.3s, color 0.3s;
+      box-sizing: border-box;
     }
 
     h1 {
@@ -29,7 +53,7 @@
     hr {
       border: none;
       margin: 25px 0;
-      border-top: 1px solid;
+      border-top: 1px solid var(--hr-color);
       transition: border-color 0.3s;
     }
 
@@ -39,130 +63,246 @@
 
     .highlight {
       padding: 10px;
-      border-left: 4px solid;
+      border-left: 4px solid var(--highlight-border);
       margin-bottom: 20px;
-      transition: background-color 0.3s, border-color 0.3s;
+      background-color: var(--highlight-bg);
+      border-radius: 0 8px 8px 0;
     }
 
     footer {
       text-align: center;
       margin-top: 40px;
       font-size: 0.9em;
-      transition: color 0.3s;
+      color: var(--footer-color);
+    }
+
+    /* Better mobile experience */
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+      
+      .container {
+        padding: 15px;
+        border-radius: 8px;
+      }
+      
+      h1 {
+        font-size: 1.5em;
+      }
+      
+      h2 {
+        font-size: 1.2em;
+      }
     }
   </style>
 </head>
 <body>
-      <div class="container">
-    <h1>Community Standards</h1>
-<div class="highlight">
-    <p><strong>Effective Date:</strong>1st DEC 2025</p>
-    <p><strong>Platform Name:</strong>PHOPCHAT</p>
-    <!-- <p><strong>Prepared by:</strong> [Your Name / Institution / Company]</p> -->
-  </div>
-    <hr>
+  <div class="container">
+    <h1>📜 Community Standards</h1>
+    <div class="highlight">
+      <p><strong>Effective Date:</strong> 1st DEC 2025</p>
+      <p><strong>App Name:</strong> PHOPCHAT</p>
+    </div>
 
-    <h2> Summary</h2>
+    </div>
+    <hr />
+
+    <h2>Introduction</h2>
     <p>
-      Community standards are the backbone of responsible social media governance. They define acceptable behavior, protect users from harm, and guide platforms in enforcing ethical, legal, and social obligations. This document provides a structured framework for developing, implementing, and monitoring community standards, with a particular focus on adolescent engagement, content moderation, privacy, and digital well-being.
+      Social and mobile applications have become ubiquitous in the lives of children and adolescents. While these platforms offer opportunities for learning, creativity, and social connection, they also expose young users to a wide spectrum of risks: privacy violations, exposure to harmful or age‑inappropriate content, cyberbullying, predation, and excessive use leading to developmental or health impacts. To navigate this digital landscape responsibly, parents and guardians must adopt a structured, informed approach to guiding and supervising their children’s usage of social media apps.
     </p>
 
-    <h2>1. Introduction</h2>
+    <hr />
+
+    <h2>Recommended Age and Access Criteria</h2>
     <p>
-      Social media platforms function as digital communities, where interactions shape identity, social norms, and collective behavior. Without clear standards, these communities risk fostering harassment, misinformation, exploitation, and other harmful behaviors. Community standards define boundaries, expectations, and enforcement mechanisms to ensure that platforms remain safe, inclusive, and trustworthy spaces for all users.
+      Based on developmental literature and regulatory frameworks, a PG‑13 threshold (i.e., age 13 and above) is recommended for children to engage in unrestricted social‑app usage. Below this age, more intensive parental oversight and restricted access should apply.
+    </p>
+    <p>
+      For children under 13 (or the local minimum legal age), parental consent is required—not only for account creation and access, but also for data collection, sharing, and interactive features (in line with statutes such as Children’s Online Privacy Protection Act (COPPA) and the General Data Protection Regulation (GDPR) where applicable).
+    </p>
+    <p>
+      Even for older adolescents, parents should assess maturity, digital literacy, and behavioral readiness before granting full autonomy on social platforms.
+    </p>
+    <p>
+        PhopChat Encourages parents to take standard measures to protect 13 year above children to 18 years. PhopChat protects children from Problematic sexual behavior and Unhealthy patterns 
     </p>
 
-    <h2>2. Principles of Community Standards</h2>
-    <p><strong>Safety and Well-being:</strong> Protect users from harassment, bullying, predation, hate speech, and harmful content.</p>
-    <p><strong>Respect and Civility:</strong> Encourage respectful discourse and mutual understanding among diverse users.</p>
-    <p><strong>Transparency:</strong> Clearly communicate rules, enforcement mechanisms, and appeals processes.</p>
-    <p><strong>Accountability:</strong> Ensure users are responsible for content shared and interactions conducted on the platform.</p>
-    <p><strong>Inclusivity:</strong> Safeguard marginalized groups, prevent discrimination, and promote equitable access.</p>
-    <p><strong>Legal Compliance:</strong> Align platform policies with local, national, and international laws.</p>
+    <hr />
 
-    <h2>3. Content Governance and Moderation</h2>
-    <p>Community standards require rigorous content governance:</p>
-    <p><strong>Prohibited Content:</strong> Explicitly define categories of unacceptable content (e.g., hate speech, sexual exploitation, self-harm promotion, misinformation).</p>
-    <p><strong>Algorithmic Oversight:</strong> Ensure that recommendation systems and feeds do not amplify harmful or misleading content.</p>
-    <p><strong>Human and AI Moderation:</strong> Combine automated detection tools with trained human moderators for nuanced decisions.</p>
-    <p><strong>Reporting Mechanisms:</strong> Users must have accessible avenues to report content violations, with transparent response protocols.</p>
-    <p><strong>Appeals Process:</strong> Provide a structured system for users to contest content moderation decisions.</p>
+    <h2>Parental Oversight, Monitoring & Navigation</h2>
+    <p>
+      Parents should initiate an active dialogue with their children about the apps they use: what functions (posting, messaging, stories, live‑feeds) they engage with, who they interact with, and what content they create or consume.
+    </p>
+    <p>
+      Oversight tools should include reviewing friend/follower lists, monitoring who can message or interact with the child, checking content visibility settings, and understanding how the app’s recommendation algorithms may shape exposure. Research shows many parents do not exercise sufficient mediation, despite high usage rates among adolescents. <span class="citation">PMC, American Psychological Association</span>
+    </p>
+    <p>
+      Rather than purely restrictive monitoring, parents should aim for a shared approach: co‑use of the app (exploring it together), establishing mutually agreed usage rules, and gradually increasing independence as digital maturity increases.
+    </p>
+    <p>
+      Monitoring must be balanced with respect for the child’s emerging autonomy and privacy: overly invasive surveillance may undermine trust and push children into hidden behaviours. <span class="citation">Kaspersky</span>
+    </p>
 
-    <h2>4. User Behavior and Engagement Standards</h2>
-    <p>Community standards also regulate behavioral expectations:</p>
-    <p>Prohibit harassment, trolling, doxxing, and coercive behavior.</p>
-    <p>Encourage constructive discourse and discourage manipulative engagement practices.</p>
-    <p>Provide clear guidance on peer-to-peer interactions, group management, and content sharing norms.</p>
-    <p>Establish age-appropriate engagement policies, particularly for adolescent users, including default safety settings and interaction limits.</p>
+    <hr />
 
-    <h2>5. Privacy and Data Protection Standards</h2>
-    <p>Ensure that user data collection, sharing, and storage align with GDPR, COPPA, and other relevant legislation.</p>
-    <p>Default privacy settings should prioritize user protection, particularly for minors.</p>
-    <p>Implement transparency in algorithmic data usage, content recommendations, and advertising targeting.</p>
-    <p>Provide users with control over their personal information, including options to delete content, download data, and manage visibility.</p>
+    <h2>Technical Controls and Environment Setup</h2>
+    <p>
+      Deploy device‑ and app‑level controls: limit screen time, schedule breaks (e.g., no access during dinner or bedtime), restrict who can contact the child, block or filter age‑inappropriate content. Official guidelines recommend leveraging built‑in parental control settings on devices and reviewing them periodically. <span class="citation">eSafety Commissioner</span>
+    </p>
+    <p>
+      Use parental‑control software and apps to supplement device settings. However, research cautions that some monitoring tools may raise privacy concerns or may be bypassed, so parents must choose carefully. <span class="citation">arXiv</span>
+    </p>
+    <p>
+      Configure the home digital environment: Wi‑Fi network filters, shared family device profiles, age‑appropriate account types, and awareness of other devices (e.g., tablets, consoles) that children may access.
+    </p>
 
-    <h2>6. Enforcement Mechanisms</h2>
-    <p>Define tiered enforcement: warnings, temporary suspensions, account limitations, or permanent bans.</p>
-    <p>Maintain a consistent and transparent enforcement policy, with clear rationale for actions.</p>
-    <p>Utilize analytics to identify trends in policy violations and refine standards accordingly.</p>
-    <p>Engage external advisory boards or ethics committees for oversight in complex cases.</p>
+    <hr />
 
-    <h2>7. Education and Community Engagement</h2>
-    <p>Educate users about community standards during onboarding and periodically through in-app resources.</p>
-    <p>Provide content moderation guidance, digital literacy materials, and safe engagement tutorials.</p>
-    <p>Foster community participation in shaping standards through feedback mechanisms, surveys, and focus groups.</p>
+    <h2>Privacy, Data Protection & Social Exposure</h2>
+    <p>
+      Children’s social‑media accounts should default to private or friends-only mode; default public exposure significantly increases risk of unwanted contact or content exposure.
+    </p>
+    <p>
+      Minimize data collection: only essential identity or profile information should be shared; geolocation, contact lists, and metadata should be restricted or made visible only to parents/guardians.
+    </p>
+    <p>
+      Encryption and secure communications: apps should use encrypted transmission and secure storage of data; parents should keep device software and security patches up to date.
+    </p>
+    <p>
+      Educate children about digital footprints: everything posted, shared, or commented may persist, be searchable, or be archived. Teach them the implications of oversharing.
+    </p>
+    <p>
+      Parents should review who can tag or mention their child, who can send direct messages, and whether the child’s profile appears in public search results. <span class="citation">Better Internet for Kids</span>
+    </p>
 
-    <h2>8. Monitoring and Evaluation</h2>
-    <p>Regularly audit enforcement outcomes, algorithmic moderation efficacy, and user reports.</p>
-    <p>Use data-driven insights to identify areas for improvement, emerging risks, or potential harms.</p>
-    <p>Adapt standards to new technologies, features, and social behaviors, ensuring relevance and effectiveness.</p>
+    <hr />
 
-    <h2>9. Ethical Considerations</h2>
-    <p>Maintain fairness and equity in enforcement and content moderation.</p>
-    <p>Avoid algorithmic bias and ensure inclusivity across demographics.</p>
-    <p>Protect users from undue surveillance or exploitation while balancing free expression rights.</p>
+    <h2>Content Moderation, Exposure, and Risk Mitigation</h2>
+    <p>
+      Social apps often use algorithmic recommendation systems, which may amplify risky or sensational content. Parents should be aware of how feeds are shaped and what exposure their children may receive (e.g., influencers, viral challenges, harmful memes).
+    </p>
+    <p>
+      Ensure children understand how to report or block content or users: bullying, harassment, self‑harm, sexual content or grooming attempts. The platform should provide accessible reporting mechanisms.
+    </p>
+    <p>
+      For younger children, consider limiting features such as live‑streaming, group chats with strangers, or large open‑network sharing until the child demonstrates readiness.
+    </p>
+    <p>
+      Encourage alternative offline activities and balanced use: tracking total screen time, encouraging face‑to‑face interaction, monitoring signs of withdrawal or excessive use.
+    </p>
 
-    <h2>10. Conclusion</h2>
-    <p>Robust community standards are critical for sustaining safe, equitable, and engaging social media ecosystems. By adhering to principles of safety, transparency, accountability, and inclusivity, platforms can foster healthy interactions, protect vulnerable users, and maintain trust within digital communities.</p>
+    <hr />
+
+    <h2>Digital Literacy, Behavioral Guidance & Family Rules</h2>
+    <p>
+      Parents should provide structured guidance: establish clear family rules (e.g., no devices during meals or after bedtime, agreed times for social‑app use, device‑free zones).
+    </p>
+    <p>
+      Teach and model critical thinking: how to evaluate content authenticity, avoid peer‑pressure challenges, understand influencer marketing, and recognize persuasive or manipulative content.
+    </p>
+    <p>
+      Encourage open communication: children should feel comfortable reporting concerns or uncomfortable interactions to their parents or trusted adults without fear of automatic punishment.
+    </p>
+    <p>
+      Build resilience: develop coping strategies for online negativity (e.g., trolling, cyberbullying) and emphasize that self‑worth is not determined by likes or follower counts.
+    </p>
+    <p>
+      Revisit rules and discussions as the child matures — digital habits at 13 may differ significantly from attitudes at 16‑17, so guidance must evolve.
+    </p>
+
+    <hr />
+
+    <h2>Regulatory & Ethical Considerations</h2>
+    <p>
+      Social apps and parental guidance must align with legal standards: e.g., COPPA for children under 13 in the US, GDPR/K for minors in the EU, and local jurisdictions which may regulate age‑appropriate services.
+    </p>
+    <p>
+      Platforms should provide meaningful age-verification, consent workflows, and robust privacy settings for minors. Parents should verify these are enabled and functional.
+    </p>
+    <p>
+      Ethical considerations: transparency about data usage, algorithms, advertising targeting, and potential mental-health impacts. Parents should monitor not just device use but well-being effects.
+    </p>
+    <p>
+      Studies show that while many parental controls are available, their effectiveness and adoption vary widely across families. <span class="citation">tandfonline.com</span>
+    </p>
+
+    <hr />
+
+    <h2>Monitoring Effectiveness & Adaptation</h2>
+    <p>
+      Periodically assess whether the existing controls and rules remain appropriate: Are screen-time limits being respected? Is the child still sharing sensitive information? Are new apps or platforms being used unsupervised?
+    </p>
+    <p>
+      Adapt controls as children demonstrate maturity: shift from active monitoring to capability-based trust and self-management.
+    </p>
+    <p>
+      Keep abreast of emerging risks: new app features (e.g., live streaming, ephemeral content), AI-powered chatbots, augmented reality filters, and peer-to-peer social features. For example, research shows gaps in parental awareness regarding generative AI apps used by teens. <span class="citation">arXiv</span>
+    </p>
+
+    <hr />
+
+    <h2>Conclusion</h2>
+    <p>
+      Parental guidance in the context of social applications requires a multi-layered strategy: technical controls, supervision and mediation, literacy and dialogue, age-appropriate access, privacy safeguards, and continual adaptation. By implementing this comprehensive framework, parents can better navigate the evolving digital environment, protect their children from potential harms, and empower them to engage in social media in a healthier, safer, and more responsible manner.
+    </p>
 
     <footer>
-      <p>© 2025 PhopChat. All rights reserved.</p>
+      <p>©2025 PhopChat. All rights reserved.</p>
     </footer>
   </div>
 
   <script>
+    // Enhanced theme detection
     function applyTheme() {
-      const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      const body = document.body;
-      const container = document.querySelector('.container');
-      const highlight = document.querySelector('.highlight');
-      const hr = document.querySelectorAll('hr');
-      const footer = document.querySelector('footer');
-
-      if (isDark) {
-        body.style.backgroundColor = '#121212';
-        body.style.color = '#ffffff';
-        container.style.backgroundColor = '#1e1e1e';
-        highlight.style.backgroundColor = '#1b2b1b';
-        highlight.style.borderLeftColor = '#0bb427';
-        hr.forEach(el => el.style.borderTopColor = '#444');
-        footer.style.color = '#ccc';
-      } else {
-        body.style.backgroundColor = '#ffffff';
-        body.style.color = '#000000';
-        container.style.backgroundColor = '#f9f9f9';
-        highlight.style.backgroundColor = '#f1fff9';
-        highlight.style.borderLeftColor = '#0bb427';
-        hr.forEach(el => el.style.borderTopColor = '#ccc');
-        footer.style.color = '#312f2f';
+      try {
+        // Try to get theme from parent (React Native)
+        if (window.ReactNativeWebView) {
+          window.ReactNativeWebView.postMessage(JSON.stringify({ type: 'getTheme' }));
+          return;
+        }
+        
+        // Fallback to system preference
+        const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        setTheme(isDark);
+      } catch (e) {
+        console.error('Error applying theme:', e);
       }
     }
 
-    // Apply theme on page load
-    applyTheme();
+    function setTheme(isDark) {
+      const root = document.documentElement;
+      if (isDark) {
+        root.setAttribute('data-theme', 'dark');
+      } else {
+        root.removeAttribute('data-theme');
+      }
+    }
 
-    // Listen for system theme changes
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyTheme);
+    // Listen for theme changes from React Native
+    window.addEventListener('message', (event) => {
+      try {
+        const data = JSON.parse(event.data);
+        if (data.theme) {
+          setTheme(data.theme === 'dark');
+        }
+      } catch (e) {
+        console.error('Error processing message:', e);
+      }
+    });
+
+    // Apply theme on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      applyTheme();
+      
+      // Listen for system theme changes (if not in WebView)
+      if (!window.ReactNativeWebView) {
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+          setTheme(e.matches);
+        });
+      }
+    });
   </script>
 </body>
 </html>
